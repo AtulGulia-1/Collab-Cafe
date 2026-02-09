@@ -1,0 +1,40 @@
+body{
+    margin:0;
+    background-color: #000;
+    color: #fff;
+}
+
+.banner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+}
+
+
+.banner .content .title{
+    font-family: 'Hollowed Grounds';
+    font-size: 8em;
+    color: #fff;
+    text-decoration: none;
+} 
+
+.banner::before{
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url(Imgs/bgImg.jpg);
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    
+    mask-image: url(Imgs/TransparentBG.gif);
+    mask-size: cover;
+    mask-position: center;
+}
+
+.banner::before:hover{
+        filter: blur(5px);
+    
+    }
